@@ -1,0 +1,25 @@
+<%= form_with model: @fail, url: article_index_path, local: true do |f|%>
+  <div class="field">
+    <%= f.label :title, "タイトル" %><br />
+    <%= f.text_field :title, id:"fail_title" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :story, "不具合内容と原因" %><br />
+    <%= f.text_area :story, class: :form__text, id:"fail_story" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :learning, "対策" %><br />
+    <%= f.text_area :learning, class: :form__text, id:"fail_learning" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "画像（任意）" %><br />
+    <%= f.file_field :image, id:"fail_image" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "投稿する", class: :form__btn  %>
+  </div>
+<% end %>
