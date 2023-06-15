@@ -1,5 +1,6 @@
 class ArticleController < ApplicationController
   def index
+    @fail = Fail.includes(:user)
   end
 
   def new
