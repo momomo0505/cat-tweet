@@ -5,4 +5,4 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          validates :name, presence: true
          validates :profile, presence: true
-end
+  has_many :fails
