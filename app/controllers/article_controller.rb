@@ -8,6 +8,11 @@ class ArticleController < ApplicationController
     puts @fail.inspect  # 追加
   end
 
+  def show
+    @fail = Fail.find(params[:id])
+  end
+
+
   def create
     @fail = Fail.new(fail_params)
     if @fail.save
@@ -16,7 +21,7 @@ class ArticleController < ApplicationController
       render :new
     end
   end
-
+  
   private
 
   def fail_params
