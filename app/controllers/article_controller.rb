@@ -12,6 +12,20 @@ class ArticleController < ApplicationController
     @fail = Fail.find(params[:id])
   end
 
+  def edit
+    @fail = Fail.find(params[:id])
+  end
+
+  def update
+    @fail = Fail.find(params[:id])
+    if @fail.update(fail_params)
+     redirect_to article_path(@fail)
+    else
+     render :edit 
+    end
+  end
+
+
 
   def create
     @fail = Fail.new(fail_params)
