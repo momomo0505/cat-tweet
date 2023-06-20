@@ -1,11 +1,10 @@
-class ArticleController < ApplicationController
+class FailsController < ApplicationController
   def index
     @fail = Fail.includes(:user)
   end
 
   def new
     @fail = Fail.new
-    puts @fail.inspect  # 追加
   end
 
   def show
@@ -19,11 +18,17 @@ class ArticleController < ApplicationController
   def update
     @fail = Fail.find(params[:id])
     if @fail.update(fail_params)
-     redirect_to article_path(@fail)
+     redirect_to fail_path(@fail)
     else
      render :edit 
     end
   end
+
+def destroy
+    @fail = Fail.find(params[:id])
+    @fail.destroy
+    redirect_to root_path
+end
 
 
 
@@ -35,7 +40,7 @@ class ArticleController < ApplicationController
       render :new
     end
   end
-  
+
   private
 
   def fail_params

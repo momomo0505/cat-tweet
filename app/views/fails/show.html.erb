@@ -8,8 +8,8 @@
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
             <% if user_signed_in? && current_user.id == @fail.user_id %>
         <div class="prototype__manage">
-          <%= link_to "編集する", edit_article_path, class: :prototype__btn %>
-          <%= link_to "削除する", root_path, class: :prototype__btn %>
+          <%= link_to "編集する", edit_fail_path, class: :prototype__btn %>
+          <%= link_to "削除する", fail_path, method: :delete , class: :prototype__btn %>
         </div>
         <% end %>
       <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
@@ -34,7 +34,7 @@
       <div class="prototype__comments">
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
          <% if user_signed_in? %>
-          <%= form_with(model: @fail ,url: article_index_path,local: true) do |f|%>
+          <%= form_with(model: @fail ,local: true) do |f|%>
             <div class="field">
               <%= f.label :hoge, "コメント" %><br />
               <%= f.text_field :hoge, id:"comment_content" %>

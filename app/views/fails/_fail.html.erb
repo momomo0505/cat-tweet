@@ -1,0 +1,8 @@
+<div class="card">
+  <%= link_to image_tag(fail.image, class: :card__img ), fail_path(fail) %>
+  <div class="card__body">
+    <%= link_to fail.title, fail_path(fail.id), class: :card__title%>
+
+    <%= link_to "by 投稿者名", root_path, class: :card__user %>
+  </div>
+</div>
