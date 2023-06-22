@@ -1,0 +1,25 @@
+<div class="main">
+  <div class="inner">
+    <div class="user__wrapper">
+      <h2 class="page-heading">
+        <%= "#{@user.name}さんの情報"%>
+      </h2>
+      <table class="table">
+        <tbody>
+          <tr>
+
+            <td class="table__col2"><%= @user.profile %></td>
+          </tr>
+
+        </tbody>
+      </table>
+      <h2 class="page-heading">
+        <%= "投稿一覧"%>
+      </h2>
+      <div class="user__card">
+        <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
+         <%= render partial: 'fails/fail' , collection: @user.fails %>
+      </div>
+    </div>
+  </div>
+</div>

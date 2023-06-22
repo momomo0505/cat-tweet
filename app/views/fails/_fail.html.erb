@@ -3,6 +3,6 @@
   <div class="card__body">
     <%= link_to fail.title, fail_path(fail.id), class: :card__title%>
 
-    <%= link_to "by 投稿者名", root_path, class: :card__user %>
+    <%= link_to "#{fail.user.name}", user_path(fail.user), class: :card__user %>
   </div>
 </div>
