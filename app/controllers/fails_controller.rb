@@ -15,7 +15,10 @@ class FailsController < ApplicationController
 
   def edit
     @fail = Fail.find(params[:id])
+    unless @fail.user_id == current_user.id
+      redirect_to action: :index
   end
+end
 
   def update
     @fail = Fail.find(params[:id])
@@ -32,8 +35,6 @@ def destroy
     redirect_to root_path
 end
 
-
-
   def create
     @fail = Fail.new(fail_params)
     if @fail.save
@@ -46,7 +47,7 @@ end
   private
 
   def fail_params
-    params.require(:fail).permit(:title, :story, :learning, :image).merge(user_id: current_user.id)
+    params.require(:fail).permit(:title, :story, :image).merge(user_id: current_user.id)
   end
 
 end

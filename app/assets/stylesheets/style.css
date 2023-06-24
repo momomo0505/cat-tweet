@@ -37,8 +37,8 @@ a {
 /* ヘッダー */
 
 .header {
-  background-color: #f1f8fe;
-  margin-bottom: 48px;
+  background-color: #e8e4fd;
+  margin-bottom: 38px;
   padding: 20px 0;
 
 }
@@ -58,16 +58,17 @@ a {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: #434444;
   text-decoration: none;
   user-select: none;
-  border: 1px #87CEFA solid;
+  border: 1px #434444 solid;
   border-radius: 3px;
   transition: 0.4s ease;
+  margin-bottom: 10px;
 }
 .nav__btn:hover{
   color: #fff;
-  background: #87CEFA;
+  background: #43b2f7;
 }
 
 .nav__logout{
@@ -128,6 +129,10 @@ a {
 }
 .page-heading {
   font-size: 30px;
+  margin-bottom: 28px;
+}
+.font20{
+  font-size: 20px;
   margin-bottom: 28px;
 }
 .card__wrapper {

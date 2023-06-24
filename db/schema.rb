@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(version: 2023_06_21_102334) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "title", null: false
     t.text "story", null: false
-    t.text "learning", null: false
     t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_fails_on_user_id"
   end
