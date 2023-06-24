@@ -4,7 +4,7 @@
       <p class="prototype__hedding">
         <%= @fail.title%>
       </p>
-      <%= link_to "#{@fail.user.name}", user_path(current_user), class: :prototype__user %>
+      <%= link_to "#{@fail.user.name}", user_path(@fail.user), class: :prototype__user %>
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
             <% if user_signed_in? && current_user.id == @fail.user_id %>
         <div class="prototype__manage">
@@ -18,18 +18,12 @@
       </div>
       <div class="prototype__body">
         <div class="prototype__detail">
-          <p class="detail__title">内容</p>
+          <p class="detail__title"></p>
           <p class="detail__message">
             <%= @fail.story %>
           </p>
         </div>
         
-        <div class="prototype__detail">
-          <p class="detail__title">解決したいこと</p>
-          <p class="detail__message">
-            <%= @fail.learning %>
-          </p>
-        </div>
       </div>
       <div class="prototype__comments">
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>

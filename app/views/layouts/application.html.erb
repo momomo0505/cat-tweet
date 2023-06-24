@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>fail pos+</title>
+    <title>cat tweet</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -17,6 +17,8 @@
           <div class="nav__left">
             <%= link_to image_tag("logo.png", class: :logo), root_path %>
           </div>
+
+          <div class="nav__r">
           <%# ログインしているときは以下を表示するようにしましょう %>
             <% if user_signed_in? %>
             <div class="nav__right">
@@ -32,12 +34,23 @@
             </div>
             <% end %>
           <%# // ログインしていないときは上記を表示するようにしましょう %>
+
+    <%# ログインしているときは以下を表示する %>
+        <% if user_signed_in? %>
+       <div class="greeting">
+        <%= "ようこそ！"%>
+         <%= link_to "#{current_user.name}さん", user_path(current_user), class: :greeting__link%>
+       </div> 
+       <% end %>
+    <%# // ログインしているときは上記を表示する %>
+       </div>
+
         </div>
       </div>
     </header>
     <%= yield %>
     <footer class="footer">
-      <p class="copyright">Copyright © fail pos+ All rights reserved.</p>
+      <p class="copyright">Copyright © cat tweet All rights reserved.</p>
     </footer>
   </body>
 </html>
