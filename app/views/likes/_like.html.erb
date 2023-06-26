@@ -1,0 +1,7 @@
+<% if user_signed_in? && fail.liked_by?(current_user)%>
+  <%=link_to "❤️", fail_likes_path(fail.id),  method: :delete, class: "tweet_likes", remote: true %>
+<% else %>
+  <%=link_to "♡", fail_likes_path(fail.id), method: :post, class: "tweet_likes", remote: true %>
+<% end %>
+<span id="like-count<%= fail.id %>"><%= fail.likes.count %></span>
+<span>いいにゃ！</span>

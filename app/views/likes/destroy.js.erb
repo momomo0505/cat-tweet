@@ -1,0 +1,2 @@
+document.getElementById('like-btn<%= @fail.id %>').innerHTML = "<%= j(render partial: 'likes/like', locals: {fail: @fail}) %>";
+document.getElementById('like-count<%= @fail.id %>').innerHTML = "<%= j(@fail.likes.count) %>";
