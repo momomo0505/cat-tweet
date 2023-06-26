@@ -7,4 +7,5 @@ class User < ApplicationRecord
          validates :profile, presence: true
   has_many :fails
   has_many :comments
+  has_many :likes
 end
