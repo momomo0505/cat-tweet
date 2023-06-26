@@ -1,0 +1,21 @@
+<div class="main">
+  <div class="inner">
+
+<h2>検索結果一覧</h2>
+<br>
+<% if @fails.present? %>
+  <ul>
+    <% @fails.each do |fail| %>
+      <li>
+        <b><%= link_to fail.title, fail %></b>
+        <span>　投稿者: <%= link_to fail.user.name, user_path(fail.user) %></span>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>検索結果はありません</p>
+<% end %>
+<br>
+</div>
+</div>
+</div>

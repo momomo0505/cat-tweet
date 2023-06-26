@@ -83,6 +83,10 @@ a {
   opacity: 0.5;
 }
 
+.search_font{
+  color: blue;
+}
+
 /* フォーム周り */
 .form__wrapper{
   min-height: calc(100vh - 161px);

@@ -44,6 +44,11 @@ end
     end
   end
 
+  def search
+    @q = Fail.ransack(params[:q])
+    @fails = @q.result
+  end
+
   private
 
   def fail_params

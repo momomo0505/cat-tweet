@@ -18,6 +18,14 @@
             <%= link_to image_tag("logo.png", class: :logo), root_path %>
           </div>
 
+<div class='item-contents' id="detailed-search-result-wrapper">
+  <%= search_form_for @q, url: search_fails_path, html: {id: "detailed-search-form"} do |f| %>
+      <div class="search-field">
+      <%= f.text_field :title_cont, placeholder: 'タイトル名' %>
+    <%= f.submit '検索' %>
+        </div>
+  <% end %>
+
           <div class="nav__r">
           <%# ログインしているときは以下を表示するようにしましょう %>
             <% if user_signed_in? %>
