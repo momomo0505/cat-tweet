@@ -2,8 +2,11 @@
   <div class="inner">
     <div class="user__wrapper">
       <h2 class="page-heading">
-        <%= "#{@user.name}さんの情報"%>
+        <%= "#{@user.name}さんのマイページ"%>
+        <h3>  <%= link_to "編集する", edit_user_path(current_user) %></h3>
       </h2>
+
+
       <table class="table">
         <tbody>
           <tr>
@@ -15,7 +18,7 @@
       </table>
       <h2 class="page-heading">
       <div class="font20">
-        <%= "投稿一覧"%>
+        <%= "ツイート一覧"%>
       </div>
       </h2>
       <div class="user__card">
