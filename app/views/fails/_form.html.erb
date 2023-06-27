@@ -1,7 +1,8 @@
 <%= form_with model: @fail, local: true do |f|%>
   <div class="field">
     <%= f.label :title, "タイトル" %><br />
-    <%= f.text_field :title, id:"fail_title" %>
+        <%= f.text_field :title, id:"fail_title" %>
+    <button type="button" id="addAdoptionText">里親募集</button>
   </div>
 
   <div class="field">
