@@ -5,10 +5,7 @@
   <div class='account-page__inner clearfix'>
     <div class='account-page__inner--left account-page__header'>
       <h2>ユーザー情報の編集</h2>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
-      <br>
-      <%= link_to "マイページに戻る", :back, class: 'btn'%>
-    </div>
+
     <div class='account-page__inner--right user-form'>
       <%= form_with model: current_user, local: true do |f|%>
         <div class='field'>
@@ -36,8 +33,12 @@
           </div>
         </div>
         <div class='actions'>
-          <%= f.submit "Update", class: 'btn'%>
-        </div>
+          <%= f.submit "更新", class: 'nav__btn'%>
+
+       <%= link_to "戻る", :back, class: 'nav__btn'%>
+    </div>
+            </div>
+    
       <% end %>
     </div>
   </div>

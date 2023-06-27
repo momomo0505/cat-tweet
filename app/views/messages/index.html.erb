@@ -1,0 +1,41 @@
+<div class="main">
+  <div class="inner">
+
+    <h2>ダイレクトメッセージ</h2>
+  <div class="dm-messages-list3">
+     <h5>
+  注意！出会い目的での利用や、個人情報のやりとりについて
+  <br>
+出会い目的での利用を禁止しています。交際を求めることや、個人情報の記載や要求などの記載、やり取りは禁止されております。
+  <br>
+相手の気持ちを考え、マナーを守ってご利用ください。
+  <br>
+ また、里親として猫を迎えるためには下記の条件を満たす必要があります。<br>
+・身分証明書が提示できる<br>
+・飼育にかかる費用を負担できる<br>
+・ペット可の住宅に住んでいる<br>
+・家族全員の同意を得ている<br>
+・完全室内飼いができる<br>
+・不妊・去勢手術をする<br>
+・愛情、責任を持って育てることができる<br>
+上記の条件のほか、子供がいる家庭は譲渡できる猫の年齢が決まっていたり、60歳以上の方が里親を希望する場合は後見人が必要だったり、里親募集先によって様々な条件があります。<br>
+    </h5>
+    </div>
+
+    <%= form_for @message, url: user_messages_path do |f| %>
+      <%= f.text_area :content %>
+      <%= f.hidden_field :recipient_id, value: @recipient.id %>
+      <%= f.submit "送信", class: 'nav__btn'%>
+    <% end %>
+
+    <ul>
+      <% @messages.each do |message| %>
+        <li>
+          <strong><%= link_to message.sender.name, user_path(message.sender) %>:</strong>
+          <%= message.content %>
+        </li>
+      <% end %>
+    </ul>
+<br>
+  </div>
+</div>

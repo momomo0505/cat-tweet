@@ -1,5 +1,6 @@
 class FailsController < ApplicationController
   def index
+    @fails = Fail.includes(:user).order(created_at: :desc)
     @fail = Fail.includes(:user)
   end
 

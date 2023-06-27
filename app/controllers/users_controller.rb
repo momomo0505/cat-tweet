@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
 
-def show
-  @user = User.find(params[:id])
-end
+  def show
+    @user = User.find(params[:id])
+    @received_messages = Message.where(recipient_id: @user.id).order(created_at: :desc)
+  end
 
 def edit
 end

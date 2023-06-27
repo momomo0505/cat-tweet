@@ -7,7 +7,7 @@
         </h3>
         <% if current_user == @user %>
           <h4>
-            <span><%= link_to "編集する", edit_user_path(current_user) %></span>
+            <span><%= link_to "編集する", edit_user_path(current_user), class: 'nav__btn'%></span>
           </h4>
         <% end %>
       </div>
@@ -19,7 +19,40 @@
           </tr>
         </tbody>
       </table>
-      
+
+
+<div class="dm-header">
+<% unless user_signed_in? && current_user == @user %>
+        <div class="send-mail-button">
+<%= link_to "ダイレクトメッセージ", user_messages_path(@user), class: "nav__btn" %>
+        </div>
+            <br>
+            <% end %>
+    <% if user_signed_in? && current_user == @user %>
+
+        <h3 class="dm-title" style="margin-right: 10px;">あなた宛の新着メッセージ一覧</h3>
+
+    <% end %>
+</div>
+
+
+    <% if user_signed_in? && current_user == @user %>
+    <div class="dm-messages-list1">
+        <div class="dm-messages-list2">
+            <ul>
+                <% @received_messages.each do |message| %>
+                    <li>
+                        <strong><%= link_to message.sender.name, user_path(message.sender) %>:</strong>
+                        <%= message.content %>
+                        <span><%= message.created_at.strftime("%Y-%m-%d %H:%M") %></span>
+                    </li>
+                <% end %>
+            </ul>
+        </div>
+        </div>
+    <% end %>
+
+
       <h2 class="page-heading">
         <div class="font20">
           <%= "ツイート一覧" %>
