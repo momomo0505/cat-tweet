@@ -11,6 +11,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :prefecture, "撮影地" %><br />
+    <%= f.select :prefecture, options_for_select(PREFECTURES) %>
+  </div>
+
+  <div class="field">
     <%= f.label :image, "画像" %><br />
     <%= f.file_field :image, id:"fail_image" %>
   </div>

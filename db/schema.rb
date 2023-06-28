@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_26_074501) do
+ActiveRecord::Schema.define(version: 2023_06_28_113703) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -33,6 +33,12 @@ ActiveRecord::Schema.define(version: 2023_06_26_074501) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "content", null: false
     t.bigint "user_id", null: false
@@ -47,6 +53,9 @@ ActiveRecord::Schema.define(version: 2023_06_26_074501) do
     t.string "title", null: false
     t.text "story", null: false
     t.bigint "user_id", null: false
+    t.string "location"
+    t.integer "category_id"
+    t.string "prefecture"
     t.index ["user_id"], name: "index_fails_on_user_id"
   end
 

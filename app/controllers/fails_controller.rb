@@ -2,8 +2,15 @@ class FailsController < ApplicationController
   def index
     @fails = Fail.includes(:user).order(created_at: :desc)
     @fail = Fail.includes(:user)
-  end
-
+  
+      if params[:prefecture]
+        @fails = Fail.includes(:user).where(prefecture: params[:prefecture]).order(created_at: :desc)
+      else
+        @fails = Fail.includes(:user).order(created_at: :desc)
+      end
+      @fail = Fail.includes(:user)
+    end
+  
   def new
     @fail = Fail.new
   end
@@ -53,7 +60,7 @@ end
   private
 
   def fail_params
-    params.require(:fail).permit(:title, :story, :image).merge(user_id: current_user.id)
+    params.require(:fail).permit(:title, :story, :prefecture, :image).merge(user_id: current_user.id)
   end
 
 end
