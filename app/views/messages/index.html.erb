@@ -31,7 +31,7 @@
     <ul>
       <% @messages.each do |message| %>
         <li>
-          <strong><%= link_to message.sender.name, user_path(message.sender) %>:</strong>
+          <strong><span><%= message.created_at.in_time_zone.strftime("%Y-%m-%d %H:%M:%S　") %></span><strong><%= link_to message.sender.name, user_path(message.sender), class: 'sender-link' %>:</strong></strong>
           <%= message.content %>
         </li>
       <% end %>
