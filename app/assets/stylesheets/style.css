@@ -102,7 +102,7 @@ a {
   margin-bottom: 20px;
 }
 
-.dm-messages-list1{
+.dm-messages-list1 {
   text-align: left;
   font-weight: bold;
   background: #ffffff;
@@ -111,14 +111,18 @@ a {
   width: 100%;
   height: 150px;
   padding: 8px;
+  margin-bottom: 30px; /* これを追加 */
 }
 
-.dm-messages-list2{
+.dm-messages-list2 {
   text-align: left;
-  border: 1px solid none;
   border-collapse: collapse;
   width: 100%;
   padding: 16px 8px;
+  height: 120px; /* これを追加 */
+  overflow-y: scroll; /* これを変更 */
+  word-break: break-all;
+  border: none;
 }
 
 .dm-messages-list3{
@@ -136,8 +140,6 @@ a {
   width: 70%;
   padding: 16px 8px;
 }
-
-
 
 .dm-title {
   margin-right: auto;
@@ -247,7 +249,7 @@ a {
   text-decoration: underline;
 }
 .prototype__image{
-  width: 40%;
+  width: 60%;
   margin: 0 auto;
   padding: 16px 0;
 }
@@ -368,7 +370,7 @@ a {
  /* スマホ表示 */
 @media (max-width: 599px) {
   .logo {
-    width: 120px;
+    width: 190px;
   }
   .page-heading {
     font-size: 20px;
@@ -378,15 +380,36 @@ a {
     margin-bottom: 60px;
   }
   .card__title {
-    font-size: 18px;
+    font-size: 22px;
+    text-align: center;
   }
+
+  .card__user {
+    font-size: 16px;
+  }
+
   .card__summary {
     font-size: 14px;
+  }
+  .prototype_body{
+    width: 100%;
   }
   .prototype_image{
     width: 100%;
   }
   .table{
     width: 100%;
+  }
+
+  .card__body {
+    display: block; 
+    width: 80%;
+    margin: 0 auto 16px;
+  }
+
+  .card__img {
+    display: block; 
+    width: 80%;
+    margin: 0 auto 16px;
   }
 }
