@@ -49,6 +49,11 @@
        <div class="greeting">
         <%= "ようこそ！"%>
          <%= link_to "#{current_user.name}さん", user_path(current_user), class: :greeting__link%>
+             <% if Message.unread_messages(current_user.id) > 0 && controller_name != "users" %>
+      <div class="notification">
+        <span>🐈‍⬛新着メッセージあり🐈‍⬛</span>
+      </div>
+    <% end %>
        </div> 
        <% end %>
     <%# // ログインしているときは上記を表示する %>
