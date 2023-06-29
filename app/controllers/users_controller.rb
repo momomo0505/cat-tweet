@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @user_fails = @user.fails.order(created_at: :desc)
-    @received_messages = Message.where(recipient_id: @user.id).order(created_at: :desc)
+    @received_messages = Message.where(recipient_id: @user.id).order(created_at: :desc).limit(5)
+
   end
 
 def edit

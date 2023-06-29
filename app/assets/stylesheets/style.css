@@ -91,6 +91,10 @@ a {
 
 /* DM関係 */
 
+.sender-link {
+  text-decoration: underline;
+}
+
 .dm-section {
   margin-bottom: 20px;
 }

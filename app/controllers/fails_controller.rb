@@ -18,7 +18,7 @@ class FailsController < ApplicationController
   def show
     @fail = Fail.find(params[:id])
     @comment = Comment.new
-    @comments = @fail.comments.all.includes(:user)
+    @comments = @fail.comments.order(created_at: :desc).includes(:user)
   end
 
   def edit
