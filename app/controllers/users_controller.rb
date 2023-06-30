@@ -6,7 +6,7 @@ class UsersController < ApplicationController
       Message.where(recipient_id: current_user.id, read: false).update_all(read: true)
      end
     @user_fails = @user.fails.order(created_at: :desc)
-    @received_messages = Message.where(recipient_id: @user.id).order(created_at: :desc).limit(5)
+    @received_messages = Message.where(recipient_id: @user.id).order(created_at: :desc).limit(10)
   end
 
 def edit
