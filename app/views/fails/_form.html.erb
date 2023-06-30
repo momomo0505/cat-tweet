@@ -2,6 +2,20 @@
   <div class="field">
     <%= f.label :title, "タイトル" %><br />
         <%= f.text_field :title, id:"fail_title" %>
+
+                <% if @fail.errors.any? %>
+                <div class="error_message">
+  <div id="error_explanation">
+    <h2><%= pluralize(@fail.errors.count, "error") %> </h2>
+    <ul>
+      <% @fail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+    </div>
+<% end %>
+
     <button type="button" id="addAdoptionText">里親募集</button>
   </div>
 

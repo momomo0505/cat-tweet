@@ -7,8 +7,8 @@
   <ul>
     <% @fails.each do |fail| %>
       <li>
-        <b><%= link_to fail.title, fail %></b>
-        <span>　投稿者: <%= link_to fail.user.name, user_path(fail.user) %></span>
+        <b><%= link_to fail.title, fail, class: 'custom-link' %></b>
+        <span>　投稿者: <%= link_to fail.user.name, user_path(fail.user) , class: 'custom-link'%></span>
       </li>
     <% end %>
   </ul>

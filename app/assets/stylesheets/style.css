@@ -96,6 +96,7 @@ a {
 
 .sender-link {
   text-decoration: underline;
+  color: #1f53a7;
 }
 
 .dm-section {
@@ -150,6 +151,10 @@ a {
 }
 
 /* フォーム周り */
+.error_message{
+  color: red;
+}
+
 .form__wrapper{
   min-height: calc(100vh - 161px);
 }
@@ -187,11 +192,17 @@ a {
 
 /* メイン */
 
+.custom-link {
+  color: #1f53a7;
+}
+
 .greeting{
   margin-bottom: 20px;
+  font-size: 14px;
 }
 .greeting__link{
   text-decoration: underline;
+  color: #1f53a7;
 }
 .page-heading {
   font-size: 30px;
@@ -244,7 +255,7 @@ a {
 .prototype__user{
   display: block;
   font-size: 16px;
-  color: #999;
+  color: #1f53a7;
   text-align: center;
   text-decoration: underline;
 }
@@ -302,7 +313,7 @@ a {
 
 .comment_user{
   font-size: 16px;
-  color: #999;
+  color: #1f53a7;
   text-decoration: underline;
 }
 
@@ -356,8 +367,17 @@ a {
     margin: 0 auto;
   }
   .page-heading {
-    font-size: 24px;
+    font-size: 18px;
   }
+
+  .card__user {
+    display: block;
+    font-size: 15px;
+    color: #1f53a7;
+    text-align: right;
+    text-decoration: underline;
+  }
+/*
   .card {
     width: 48%;
     margin-bottom: 40px;
@@ -366,7 +386,7 @@ a {
     width: 60%;
   }
 }
-
+/*
  /* スマホ表示 */
 @media (max-width: 599px) {
   .logo {
@@ -375,6 +395,22 @@ a {
   .page-heading {
     font-size: 20px;
   }
+
+  .card__user {
+    display: block;
+    font-size: 12px;
+    color: #1f53a7;
+    text-align: right;
+    text-decoration: underline;
+  }
+
+  .card__title {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  /*
   .card {
     width: 100%;
     margin-bottom: 60px;
@@ -413,3 +449,4 @@ a {
     margin: 0 auto 16px;
   }
 }
+/*

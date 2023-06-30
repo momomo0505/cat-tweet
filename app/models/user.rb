@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-         validates :name, presence: true
+         validates :name, presence: true, length: { maximum: 8, too_long: 'ユーザー名は8字以下で入力してください' }
          validates :profile, presence: true
   has_many :fails
   has_many :comments
