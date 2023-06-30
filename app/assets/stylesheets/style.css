@@ -53,6 +53,8 @@ a {
 }
 .logo {
   width: 200px;
+  margin-left: 15px;
+  margin-top: 10px;
 }
 .nav__btn{
   display: inline-block;
@@ -306,7 +308,7 @@ a {
 }
 
 .prototype__comments{
-  background-color: #f6f6f6;
+  background-color: #f5f4fd;
   padding: 20px;
   margin: 28px 0 40px 0;
 }

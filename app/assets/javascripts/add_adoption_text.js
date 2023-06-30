@@ -7,9 +7,9 @@ document.addEventListener('turbolinks:load', function() {
           if (inputField) {
               var existingText = inputField.value;
               if (existingText.length > 0) {
-                  inputField.value = existingText + "(里親)";
+                  inputField.value = existingText + "(里募)";
               } else {
-                  inputField.value = "(里親)";
+                  inputField.value = "(里募)";
               }
           }
       });
