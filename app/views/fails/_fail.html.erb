@@ -1,5 +1,5 @@
 <div class="card">
-  <%= link_to image_tag(fail.image.variant(resize: "420x420"), loading: "lazy", class: "card__img"), fail_path(fail) %>
+  <%= link_to image_tag(fail.image.variant(resize: "420x420"), class: "card__img"), fail_path(fail) %>
   <div class="card__body">
     <%= link_to fail.title, fail_path(fail.id), class: :card__title%>
     <%= link_to fail.prefecture, fails_path(prefecture: fail.prefecture), class: :card__user%>
