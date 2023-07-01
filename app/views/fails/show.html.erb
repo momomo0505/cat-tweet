@@ -5,7 +5,6 @@
         <%= @fail.title%>
       </p>
 
-
       <div class="prototype__body">
         <div class="prototype__detail">
           <p class="detail__title"></p>
@@ -13,10 +12,6 @@
           <%= @fail.story %>
            <p><%= @fail.prefecture %></p>
           </p>
-
-
-
-
 
       <%= link_to "#{@fail.user.name}", user_path(@fail.user), class: :prototype__user %>
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
@@ -34,7 +29,6 @@
 <div id="like-btn<%= @fail.id %>">
   <%= render partial: "likes/like", locals: { fail: @fail } %>
 </div>
-
       </div>
        </div>  
 
