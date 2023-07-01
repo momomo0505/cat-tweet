@@ -123,8 +123,8 @@ a {
   border-collapse: collapse;
   width: 100%;
   padding: 16px 8px;
-  height: 120px; /* これを追加 */
-  overflow-y: scroll; /* これを変更 */
+  height: 120px;
+  overflow-y: scroll;
   word-break: break-all;
   border: none;
 }
