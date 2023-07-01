@@ -7,7 +7,7 @@
         </h3>
         <% if current_user == @user %>
           <h4>
-            <span><%= link_to "編集する", edit_user_path(current_user), class: 'nav__btn'%></span>
+            <span><%= link_to "編集", edit_user_path(current_user), class: 'nav__btn'%></span>
           </h4>
         <% end %>
       </div>
@@ -55,7 +55,7 @@
 
       <h2 class="page-heading">
         <div class="font20">
-          <%= "ツイート一覧" %>
+          <%= "この人のツイート一覧" %>
         </div>
       </h2>
       
