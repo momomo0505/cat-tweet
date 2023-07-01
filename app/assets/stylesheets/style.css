@@ -454,6 +454,10 @@ a {
   margin-right: 20px;
  }
 
+ .greeting{
+  font-size: 12px;
+}
+
 }
   /*
   .card {
