@@ -53,8 +53,3 @@ production:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: fail_pos+_production
-  username: fail_pos+
-  password: <%= ENV['FAIL_POS+_DATABASE_PASSWORD'] %>
