@@ -429,20 +429,12 @@ a {
  /* スマホ表示 */
 @media (max-width: 599px) {
   .logo {
-    width: 190px;
+    width: 130px;
   }
 
   .page-heading {
     font-size: 20px;
   }
-
-.nav__left{
-  width: 60%;
-}
-
-.item-contents{
-  height: 60%;
-}
 
   .card__user {
     display: block;
