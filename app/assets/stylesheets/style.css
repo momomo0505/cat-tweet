@@ -43,6 +43,7 @@ a {
 }
 
 .inner {
+  padding: 0 20px;
   width: 1024px;
   margin: 0 auto;
 }
