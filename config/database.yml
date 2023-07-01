@@ -19,8 +19,7 @@ development:
   username: root
   password:
   host: localhost
-
-  database: fail_pos+_app_development
+  database: fail_pos+_development
 
 test:
   <<: *default
