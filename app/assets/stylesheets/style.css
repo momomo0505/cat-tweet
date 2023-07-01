@@ -436,6 +436,14 @@ a {
     font-size: 20px;
   }
 
+.nav__left{
+  width: 60%;
+}
+
+.item-contents{
+  height: 60%;
+}
+
   .card__user {
     display: block;
     font-size: 12px;
